@@ -14,7 +14,7 @@ Communicating scheduling information is particularly important. Indeed, in Apach
 The Embedded REST Server communicates via the port '8181' on the Nimbus host.  This port can be modified by simply editing the file '/src/main/resources/Scheduler.properties'. Developers should change the line "rest.resources.port=8181".
 
 
-## Integrate the Prostor-Scheduler in Storm Nimbus
+## Integrate Prostor-Scheduler in Storm Nimbus
 1- Copy the jar file 'prostor-scheduler.jar' into the directory 'STORM-HOME/lib/' (where 'STORM-HOME' is the install directory of Storm Nimbus).
 
 2- Declare the scheduler in the configuration file 'storm.yaml', by adding the following line:
@@ -29,7 +29,7 @@ In Storm topologies' configurations, developers have to add the deployment infor
 
 These information are composed of the "componentId" and the targeted supervisors' hostnames, underscore-separated (e.g., "hostname1_hostname2").
 
-Below is an example of a yaml configuration file for a Storm Flux topology:
+Below, is an example of a yaml configuration file for a Storm Flux topology:
 
 ```
   name: "myTopology"
@@ -59,6 +59,8 @@ Below is an example of a yaml configuration file for a Storm Flux topology:
     Source: "hostname1_hostname2"
     ProcessingComponent: "hostname1_hostname2"
 ```
+
+In the above example, Prostor-Scheduler deploys two instances of the spout 'Source'. An instance on 'hostname1', and a second instance on 'hostname2'. Similarly for the bolt 'ProcessingComponent'.
 
 ### Get the scheduling information of a given component
 Call the embedded REST server from a web browser: 
