@@ -1,7 +1,7 @@
 # Prostor-Scheduler
 
 ## Overview
-Prostor-Scheduler is a custom locagtion-aware scheduler for Apache Storm. It allows to deploy each component instance (of a Storm topology) on supervisor hosts specified by the developer.
+Prostor-Scheduler is a custom location-aware scheduler for [Apache Storm](http://storm.apache.org/). It allows to deploy each component instance (of a Storm topology) on a supervisor host specified by the developer.
 
 Before using Prostor-Scheduler, it is recommended to be familiar with the concepts of [Apache Storm](http://storm.apache.org/).
 
