@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>orange.labs.iot.computational.storage.storm.schedulers</groupId>
 	<artifactId>prostor-scheduler</artifactId>
-	<version>1.0</version>
+	<version>0.1</version>
 
 	<properties>
-		<storm.version>1.0.2</storm.version>
+		<storm.version>1.0.1</storm.version>
 	</properties>
 
 	<build>

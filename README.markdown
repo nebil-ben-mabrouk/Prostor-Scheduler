@@ -60,7 +60,7 @@ Below, is an example of a yaml configuration file for a Storm Flux topology:
     ProcessingComponent: "hostname1_hostname2"
 ```
 
-In the above example, Prostor-Scheduler deploys two instances of the spout 'Source'. An instance on 'hostname1', and a second instance on 'hostname2'. Similarly for the bolt 'ProcessingComponent'.
+In the above example, Prostor-Scheduler deploys two instances of the spout 'Source'. An instance on 'hostname1', and a second instance on 'hostname2'.  Similarly for the bolt 'ProcessingComponent'.
 
 ### Get the scheduling information of a given component
 Call the embedded REST server from a web browser: 
