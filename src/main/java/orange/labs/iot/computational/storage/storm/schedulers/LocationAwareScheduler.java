@@ -30,6 +30,36 @@ public class LocationAwareScheduler implements IScheduler {
 	private static final String SCHEDULER = "LocationAwareScheduler";
 
 	private Map<String, SupervisorDetails> supervisorLocations = new HashMap<String, SupervisorDetails>();
+	
+	@Override
+	public void prepare(Map conf) {
+		LogService.localLog(SCHEDULER, "Preparing the location-aware scheduler");
+
+		try {
+		
+			EmbeddedRestServer restServer = new EmbeddedRestServer();
+			restServer.startRestServer();
+			
+		} catch (Exception e) {
+			LogService.localLog(SCHEDULER, "Error occurred: " + e.getMessage());
+		}
+	}
+
+	@Override
+	public void schedule(Topologies topologies, Cluster cluster) {
+		try {
+			LogService.localLog(SCHEDULER, "Executing the location-aware scheduler");
+
+			// processing supervisors
+			prepareSupervisors(cluster);
+
+			// processing topologies
+			scheduleTopologiesWithLocationAwareness(topologies, cluster);
+
+		} catch (Exception e) {
+			LogService.localLog(SCHEDULER, "Error occurred: " + e.getMessage());
+		}
+	}
 
 	public void prepareSupervisors(Cluster cluster) {
 
@@ -104,7 +134,7 @@ public class LocationAwareScheduler implements IScheduler {
 										ExecutorDetails executor = execIterator.next();
 										workerToExecutors.get(tobeAssigned).add(executor);
 
-										// send assignment to Kafka
+										// send assignment to the REST scheduling service
 										ScheduleService.addSchedule(topology.getId(), name, executor.getStartTask(), location);
 									
 										LogService.localLog(SCHEDULER, executor + "==>"
@@ -141,33 +171,5 @@ public class LocationAwareScheduler implements IScheduler {
 		}
 	}
 
-	@Override
-	public void prepare(Map conf) {
-		LogService.localLog(SCHEDULER, "Preparing the location-aware scheduler");
-
-		try {
-		
-			EmbeddedRestServer restServer = new EmbeddedRestServer();
-			restServer.startRestServer();
-			
-		} catch (Exception e) {
-			LogService.localLog(SCHEDULER, "Error occurred: " + e.getMessage());
-		}
-	}
-
-	@Override
-	public void schedule(Topologies topologies, Cluster cluster) {
-		try {
-			LogService.localLog(SCHEDULER, "Executing the location-aware scheduler");
-
-			// processing supervisors
-			prepareSupervisors(cluster);
-
-			// processing topologies
-			scheduleTopologiesWithLocationAwareness(topologies, cluster);
-
-		} catch (Exception e) {
-			LogService.localLog(SCHEDULER, "Error occurred: " + e.getMessage());
-		}
-	}
+	
 }

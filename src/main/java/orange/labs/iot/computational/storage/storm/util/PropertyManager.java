@@ -6,12 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-//import orange.labs.srol.fog.iot.data.flow.processing.embedded.rest.resources.LogService;
-
 public class PropertyManager {
 	
 	private static final String resource = "Scheduler.properties";
-	//private static String logMsg = "";
 	
 	public static Properties getKafkaConsumerProperties() throws IOException{
 		String propFileName = "KafkaConsumer.properties";
@@ -38,9 +35,6 @@ public class PropertyManager {
 
 		result = prop.getProperty(property);
 
-		//logMsg = "Loading property: " + property + "=" + result;
-		//LogService.localLog("PropertiesManager", logMsg);
-
 		return result;
 	}
 
@@ -54,11 +48,6 @@ public class PropertyManager {
 			result += prop.getProperty((String) key) + "\n";
 		}
 		
-		//result = Arrays.toString(prop.entrySet().toArray());
-		
-		//logMsg = "Loading properties:\n" + result;
-		//LogService.localLog("PropertiesManager", logMsg);
-
 		return result;
 	}
 
@@ -73,8 +62,6 @@ public class PropertyManager {
 
 		fw.close();
 
-		//logMsg = "Setting property: " + property + "=" + value;
-		//LogService.localLog("PropertiesManager", logMsg);
 	}
 
 	public static Properties loadProperties() throws IOException {
