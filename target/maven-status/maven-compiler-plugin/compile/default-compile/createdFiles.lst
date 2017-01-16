@@ -1,0 +1,8 @@
+orange/labs/iot/computational/storage/schedule/rest/server/CORSFilter.class
+orange/labs/iot/computational/storage/schedule/rest/server/EmbeddedRestServer.class
+orange/labs/iot/computational/storage/storm/schedulers/LocationAwareScheduler.class
+orange/labs/iot/computational/storage/storm/schedulers/LocationAwareScheduler$1.class
+orange/labs/iot/computational/storage/schedule/rest/resources/LogService.class
+orange/labs/iot/computational/storage/storm/util/PropertyManager.class
+orange/labs/iot/computational/storage/schedule/rest/resources/ScheduleService.class
+orange/labs/iot/computational/storage/schedule/rest/resources/PropertyService.class
