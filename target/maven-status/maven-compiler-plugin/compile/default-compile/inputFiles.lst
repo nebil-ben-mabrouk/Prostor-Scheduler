@@ -1,7 +1,0 @@
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/schedule/rest/resources/ScheduleService.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/storm/util/PropertyManager.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/schedule/rest/resources/PropertyService.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/schedule/rest/server/EmbeddedRestServer.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/schedule/rest/server/CORSFilter.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/schedule/rest/resources/LogService.java
-/home/nebil/workspace/eclipse/jee-neon/workspace/prostor-scheduler/src/main/java/orange/labs/iot/computational/storage/storm/schedulers/LocationAwareScheduler.java
