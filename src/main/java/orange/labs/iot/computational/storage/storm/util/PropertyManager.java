@@ -10,24 +10,6 @@ public class PropertyManager {
 	
 	private static final String resource = "Scheduler.properties";
 	
-	public static Properties getKafkaConsumerProperties() throws IOException{
-		String propFileName = "KafkaConsumer.properties";
-		Properties properties = new Properties();
-		InputStream inputStream = null;
-		
-		try{
-			inputStream = PropertyManager.class.getClassLoader().getResourceAsStream(propFileName);
-			if (inputStream != null) {
-				properties.load(inputStream);
-			}
-			inputStream.close();
-			
-		}catch (Exception e) {
-			System.err.println("Exception: " + e);
-		}	
-		return properties;
-	}
-	
 	public static String getPropertyValue(String property) throws IOException {
 		String result = "";
 
