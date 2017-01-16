@@ -6,7 +6,7 @@
 	<version>1.0</version>
 
 	<properties>
-		<storm.version>1.0.1</storm.version>
+		<storm.version>1.0.2</storm.version>
 	</properties>
 
 	<build>
